@@ -26,7 +26,7 @@ function setUsername() {
         setUsername();
     } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = `${myName}さん、チェック感謝します。`;
+    myHeading.textContent = myName + 'さん、チェック感謝します。';
 }}
 /*prompt()関数はalertとは違ってユーザーにデータを入力するまで待機、ユーザーがOKを押した場合変数にデータを格納する。
 今回はユーザーの名前。その後localStorageと呼ばれるAPIを呼び出すことでブラウザーにデータを格納して後で受け取れる。
@@ -37,7 +37,7 @@ if (!localStorage.getItem('name')) {
     setUsername();
 } else {
     const storedName = localStorage.getItem('name');
-    myHeading.textContent = `$(storedName)さん、チェック感謝します。`;
+    myHeading.textContent = storedName + 'さん、チェック感謝します。';
 }
 
 /*最初にnameを取得しているかを確認。否定演算子(!で論理否定)を使用している。
